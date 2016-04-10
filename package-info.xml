@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<name>Team List Lite</name>
+	<id>live627:team_list_lite</id>
+	<version>1.0</version>
+	<type>modification</type>
+
+	<install>
+		<database>install.php</database>
+		<require-file name="TeamList.php" destination="$sourcedir" />
+		<require-file name="Subs-TeamList.php" destination="$sourcedir" />
+		<require-file name="TeamList.template.php" destination="$themedir" />
+		<require-file name="TeamList.english.php" destination="$languagedir" />
+		<require-file name="offline.gif" destination="$themes_dir/default/images" />
+		<require-file name="online.gif" destination="$themes_dir/default/images" />
+	</install>
+
+	<uninstall>
+		<code>uninstall-required.php</code>
+		<remove-file name="$sourcedir/TeamList.php" />
+		<remove-file name="$sourcedir/Subs-TeamList.php" />
+		<remove-file name="$themedir/TeamList.template.php" />
+		<remove-file name="$languagedir/TeamList.english.php" />
+		<remove-file name="$themes_dir/default/images/offline.gif" />
+		<remove-file name="$themes_dir/default/images/online.gif" />
+	</uninstall>
+
+</package-info>
